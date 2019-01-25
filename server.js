@@ -25,7 +25,7 @@ app.use('/movies', proxy({
     target: 'http://54.146.26.33'
 }));
 
-app.use('/movies', proxy({
+app.use('/movies/', proxy({
     target: 'http://3.16.200.137'
 }))
 
