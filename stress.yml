@@ -1,0 +1,16 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60
+      arrivalRate: 1000
+  processor: "./stressHelper.js"
+
+scenarios:
+  - name: "Get request"
+    flow:
+      # call generateRandomData() to create listing
+      - function: "generateRandomData"
+      - get:
+          url: "/critics/{{ listing }}"
+      # Print the data we're sending while debugging the script:
+      - log: "Sent a request to {{ listing }}"
