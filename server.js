@@ -17,13 +17,13 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static(__dirname));
 
-app.use('/movie', proxy({
-    target: 'http://18.224.238.238'
-}));
+// app.use('/movie', proxy({
+//     target: 'http://18.224.238.238'
+// }));
 
-app.use('/movies', proxy({
-    target: 'http://107.21.131.157'
-}));
+// app.use('/movies', proxy({
+//     target: 'http://107.21.131.157'
+// }));
 
 app.use('/critics', proxy({
     target: 'http://18.219.96.110'
